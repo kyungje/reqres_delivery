@@ -1,19 +1,19 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: delivery
+  name: reqres_delivery
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: delivery
+      app: reqres_delivery
   template:
     metadata:
       labels:
-        app: delivery
+        app: reqres_delivery
     spec:
       containers:
-        - name: delivery
-          image: admin10acr.azurecr.io/delivery
+        - name: reqres_delivery
+          image: admin10acr.azurecr.io/reqres_delivery
           ports:
             - containerPort: 8080
